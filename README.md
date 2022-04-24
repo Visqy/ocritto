@@ -1,2 +1,2 @@
-# ocritto
-ocritto is a decent PDF text recognition.
+# OCRitto
+OCRitto is a decent PDF text recognition.
