@@ -2,8 +2,6 @@
 
 **OCRitto** is a Python-based OCR pipeline that intelligently processes exam-style PDFs to extract and separate questions and explanations. Designed for structured exam papers (e.g., tryouts, practice exams), OCRitto leverages image processing and Tesseract OCR to automate the separation of question content into organized folders.
 
----
-
 ## ✨ Features
 
 - 🖨 Convert multi-page PDFs to clean, cropped images
@@ -11,8 +9,6 @@
 - ✂️ Automatically splits **questions** and **explanations**
 - 📁 Saves output images into folder structure by subject and package name
 - 🔄 Batch-processes multiple PDF files in one go
-
----
 
 ## 📁 Folder Structure
 
@@ -27,14 +23,10 @@
 └── README.md               # You are here
 ```
 
----
-
 ## ⚙️ Requirements
 
 - Python 3.7+
 - Tesseract OCR installed on your system (e.g., [Tesseract OCR](https://github.com/tesseract-ocr/tesseract))
-
----
 
 ## 📦 Dependencies
 
@@ -52,16 +44,12 @@ Install them all using:
 pip install -r requirements.txt
 ```
 
----
-
 ## 🔧 Configuration
 
 Set the path to your Tesseract executable inside the script:
 ```python
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 ```
-
----
 
 ## 🚀 How to Use
 
@@ -84,8 +72,6 @@ result/
         └── pembahasan_soal_2_Aljabar.jpg
 ```
 
----
-
 ## 🧠 How It Works
 
 1. PDF is converted to high-res images (with margin cropped)
@@ -96,8 +82,6 @@ result/
    - **Materi** → Extracted to name the files with relevant topic
 4. Each question and explanation is saved as a separate `.jpg`
 
----
-
 ## 📝 Notes
 
 - Assumes a consistent PDF layout (e.g., all questions labeled with "Nomor", "Pembahasan", etc.)
@@ -106,5 +90,3 @@ result/
   custom_config = r'-c tessedit_char_whitelist=... --psm 6'
   ```
 - If OCR detection fails, the PDF is skipped and folder is auto-deleted
-
----
